@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="image/pexels-expect-best-79873-323780 - Copie.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>JAMM Immo | Votre agence immobilière premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom CSS */
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .hero-content {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-5px);
+            }
+            50% {
+                transform: translateY(5px);
+            }
+        }
+    </style>
+</head>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+          <div class="flex items-center">
+  <!-- Image du logo -->
+  <img src="image/pexels-expect-best-79873-323780 - Copie.jpg" alt="Logo JAMM Immo" class="h-10 w-10 mr-3 object-contain">
+  
+  <!-- Nom de la marque -->
+  <h1 class="text-3xl font-bold text-blue-600">
+    JAMM<span class="text-gray-800">Immo</span>
+  </h1>
+</div>
+
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Accueil</a>
+                <a href="#properties" class="text-gray-600 hover:text-blue-600">Biens</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">À propos</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i> 01 23 45 67 89
+                </button>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#" class="block py-2 text-blue-600 font-medium">Accueil</a>
+            <a href="#properties" class="block py-2 text-gray-600 hover:text-blue-600">Biens</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">À propos</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            <button class="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium">
+                <i class="fas fa-phone-alt mr-2"></i> Nous appeler
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+      <!-- Hero Section with Video Background -->
+    <section class="hero text-white py-20 md:py-32 flex items-center">
+        <video autoplay muted loop playsinline class="hero-video">
+            <!-- Ajoutez plusieurs sources pour une meilleure compatibilité -->
+            <source src="vidéo/5824197-uhd_2160_3840_24fps.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+        <div class="hero-content container mx-auto px-4 w-full">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Trouvez votre maison de rêve</h1>
+                <p class="text-xl mb-8">Nous sommes une plateforme spécialisée dans la vente, la location et la gestion de biens immobiliers au Sénégal.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex space-x-4">
+                        <a href="Dakar.html">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                            Dakar
+                        </button>
+                        </a>
+                        <a href="thiés.html">
+                        <button class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full font-medium transition duration-300">
+                            Thiès
+                        </button>
+                        </a>
+                    </div>
+                    <button class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-full font-medium transition duration-300">
+                        <i class="fas fa-play mr-2"></i> Vidéo présentation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Featured Properties -->
+    <section id="properties" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos biens en vedette</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Découvrez notre sélection exclusive de propriétés premium à travers le senegal</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+            <div class="property-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Maison moderne" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">À vendre</div>
+                    <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">487 500 000 CFA</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Villa moderne à Castor</h3>
+                    <p class="text-gray-600 mb-4 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>Bel Air
+                    </p>
+                    <div class="flex justify-between text-gray-600 border-b border-gray-200 pb-4 mb-4">
+                        <span class="flex items-center"><i class="fas fa-bed text-blue-600 mr-2"></i> 4 chambres</span>
+                        <span class="flex items-center"><i class="fas fa-bath text-blue-600 mr-2"></i> 3 salles de bain</span>
+                        <span class="flex items-center"><i class="fas fa-ruler-combined text-blue-600 mr-2"></i> 180m²</span>
+                    </div>
+                    <!-- Bouton Voir plus ajouté ici -->
+                      <a href="voir1.html" class="btn">  
+                    <button class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    </a>  
+                </div>
+            </div>
+                
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Appartement luxe" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">À louer</div>
+                        <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">625 000 CFA/mois</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Appartement luxueux à liberté6</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> petit Mbao, 
+                        </p>
+                        <div class="flex justify-between text-gray-600 border-b border-gray-200 pb-4 mb-4">
+                            <span class="flex items-center"><i class="fas fa-bed text-blue-600 mr-2"></i> 3 chambres</span>
+                            <span class="flex items-center"><i class="fas fa-bath text-blue-600 mr-2"></i> 2 salles de bain</span>
+                            <span class="flex items-center"><i class="fas fa-ruler-combined text-blue-600 mr-2"></i> 110m²</span>
+                        </div>
+                            <!-- Bouton Voir plus ajouté ici -->
+                              <a href="voir2.html" class="btn">  
+                            <button class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            </a>
+                       </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Maison campagne" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">À vendre</div>
+                        <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">292 500 000 CFA</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Maison de campagne en Provence</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> Pikine Rue 10
+                        </p>
+                        <div class="flex justify-between text-gray-600 border-b border-gray-200 pb-4 mb-4">
+                            <span class="flex items-center"><i class="fas fa-bed text-blue-600 mr-2"></i> 5 chambres</span>
+                            <span class="flex items-center"><i class="fas fa-bath text-blue-600 mr-2"></i> 3 salles de bain</span>
+                            <span class="flex items-center"><i class="fas fa-ruler-combined text-blue-600 mr-2"></i> 220m²</span>
+                        </div>
+                         <!-- Bouton Voir plus ajouté ici -->
+                          <a href="voir3.html" class="btn">  
+                    <button class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+   <!-- Services -->
+<section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos services premium</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Une gamme complète de services immobiliers pour répondre à tous vos besoins</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Achat immobilier -->
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-home text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Achat immobilier</h3>
+                <p class="text-gray-600 mb-4">Notre expertise du marché local nous permet de vous trouver la propriété parfaite au meilleur prix.</p>
+                <button onclick="document.getElementById('achat-detail').classList.toggle('hidden')" class="text-blue-600 font-medium flex items-center focus:outline-none">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <div id="achat-detail" class="mt-4 text-sm text-gray-700 hidden">
+                    <p>Nous vous accompagnons dans la recherche, la négociation et l'acquisition de votre bien idéal. Grâce à notre connaissance approfondie du marché local, nous vous aidons à éviter les pièges, à identifier les meilleures opportunités et à acheter en toute confiance.</p>
+                </div>
+            </div>
+
+            <!-- Vente accompagnée -->
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-euro-sign text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Vente accompagnée</h3>
+                <p class="text-gray-600 mb-4">Nous maximisons la valeur de votre bien grâce à notre réseau et notre stratégie marketing innovante.</p>
+                <button onclick="document.getElementById('vente-detail').classList.toggle('hidden')" class="text-blue-600 font-medium flex items-center focus:outline-none">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <div id="vente-detail" class="mt-4 text-sm text-gray-700 hidden">
+                    <p>Nous vous offrons un accompagnement sur mesure pour vendre votre bien rapidement et au meilleur prix : estimation professionnelle, mise en valeur, diffusion ciblée, visites filtrées, accompagnement juridique… vous êtes entre de bonnes mains.</p>
+                </div>
+            </div>
+
+            <!-- Gestion locative -->
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-building text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Gestion locative</h3>
+                <p class="text-gray-600 mb-4">Confiez-nous la gestion de votre bien locatif et profitez d'un service complet et sans tracas.</p>
+                <button onclick="document.getElementById('gestion-detail').classList.toggle('hidden')" class="text-blue-600 font-medium flex items-center focus:outline-none">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <div id="gestion-detail" class="mt-4 text-sm text-gray-700 hidden">
+                    <p>Nous nous occupons de tout : mise en location, sélection des locataires, encaissement des loyers, suivi des travaux et déclarations fiscales. Un service professionnel qui vous garantit sérénité et rentabilité.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <!-- Évaluation gratuite -->
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-search-dollar text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Évaluation gratuite</h3>
+                <p class="text-gray-600 mb-4">Obtenez une estimation précise de la valeur de votre bien sur le marché actuel.</p>
+                <button onclick="document.getElementById('evaluation-detail').classList.toggle('hidden')" class="text-blue-600 font-medium flex items-center focus:outline-none">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <div id="evaluation-detail" class="mt-4 text-sm text-gray-700 hidden">
+                    <p>Notre estimation s’appuie sur des données fiables et à jour. Vous bénéficiez d’un avis objectif et transparent pour prendre vos décisions de vente, d’achat ou d’investissement en toute confiance.</p>
+                </div>
+            </div>
+
+            <!-- Conseil en investissement -->
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Conseil en investissement</h3>
+                <p class="text-gray-600 mb-4">Nos experts vous accompagnent pour faire les meilleurs choix d'investissement immobilier.</p>
+                <button onclick="document.getElementById('investissement-detail').classList.toggle('hidden')" class="text-blue-600 font-medium flex items-center focus:outline-none">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <div id="investissement-detail" class="mt-4 text-sm text-gray-700 hidden">
+                    <p>Nous vous aidons à bâtir une stratégie solide en fonction de votre budget, de vos objectifs et des opportunités du marché. Que ce soit pour du locatif, du patrimonial ou du rendement, nous vous guidons pas à pas.</p>
+                </div>
+            </div>
+
+            <!-- Accompagnement juridique -->
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-file-signature text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Accompagnement juridique</h3>
+                <p class="text-gray-600 mb-4">Notre équipe juridique vous assure une transaction en toute sécurité et conformité.</p>
+                <button onclick="document.getElementById('juridique-detail').classList.toggle('hidden')" class="text-blue-600 font-medium flex items-center focus:outline-none">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <div id="juridique-detail" class="mt-4 text-sm text-gray-700 hidden">
+                    <p>Nous vous assistons dans toutes les étapes juridiques : compromis, actes notariés, vérification des titres, et respect des réglementations. Sécurité, conformité et tranquillité garanties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Ils nous ont fait confiance</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Découvrez ce que nos clients disent de leur expérience avec Jamm Immo</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="image/pexels-moses-loeto-2151644178-32636192.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Mamadou Faye</h4>
+                            <p class="text-sm opacity-80">Acheteur à Dakar</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">"Jamm Immo a su trouver exactement ce que je recherchais en seulement 3 visites. Leur connaissance du marché Senegalais est impressionnante."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="image/pexels-pixabay-37546.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Amy Thiaw</h4>
+                            <p class="text-sm opacity-80">Vendeuse à Dakar</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">"J'ai vendu mon appartement 15% au-dessus du prix du marché grâce à leur stratégie de mise en valeur du bien. Service impeccable."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="image/pexels-enginakyurt-1441151.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Marie G Coly</h4>
+                            <p class="text-sm opacity-80">Investisseuse</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">"Leur conseil en investissement m'a permis de constituer un patrimoine rentable en seulement 3 ans. Je recommande vivement."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Contactez-nous</h2>
+                    <p class="text-gray-600 mb-8">Que vous souhaitiez acheter, vendre ou simplement obtenir des conseils, notre équipe est à votre disposition.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">Nos bureaux</h3>
+                                <p class="text-gray-600">Sacré Coeur 3<br>Dakar, Sénégal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">Téléphone</h3>
+                                <p class="text-gray-600">76 165 03 77<br>Lun-Ven: 9h-19h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">Email</h3>
+                                <p class="text-gray-600">a.diabate75@outlook.fr<br>Réponse sous 24h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Suivez-nous</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 hover:bg-blue-900 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-gray-600 mb-2">Nom</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-600 mb-2">Sujet</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-600 mb-2">Message</label>
+                                <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                                Envoyer le message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Pourquoi choisir Jamm Immo ?</h2>
+                    <p class="text-gray-600 mb-6">Fondée en 2025, Jamm Immo est devenue une référence dans le secteur immobilier premium grâce à son expertise, son réseau exclusif et son engagement envers l'excellence.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                                <i class="fas fa-medal text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">2 ans d'expertise</h3>
+                                <p class="text-gray-600">Notre expérience nous permet d'anticiper les tendances du marché et de vous conseiller au mieux.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Réseau exclusif</h3>
+                                <p class="text-gray-600">Accès à des biens souvent non listés sur le marché traditionnel grâce à notre réseau de professionnels.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-blue-100 w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Service personnalisé</h3>
+                                <p class="text-gray-600">Chaque client bénéficie d'un conseiller dédié pour un accompagnement sur mesure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <img src="image/WhatsApp Image 2025-07-05 à 14.59.26_d6d3a30d.jpg" alt="Équipe Jamm Immo" class="rounded-xl shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-trophy text-blue-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Prix de l'excellence</h3>
+                                <p class="text-gray-600">Meilleure agence 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">100+</div>
+                    <h3 class="text-xl font-medium text-gray-800">Transactions réussies</h3>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">98%</div>
+                    <h3 class="text-xl font-medium text-gray-800">Clients satisfaits</h3>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">2</div>
+                    <h3 class="text-xl font-medium text-gray-800">Années d'expérience</h3>
+                </div>
+            </div>
+        </div>
+
+    <!-- Map -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615674389!3d48.858370079287475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1684325262353!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-home text-blue-400 text-3xl mr-2"></i>
+                        <h3 class="text-2xl font-bold" Jamm<span class="text-white">Immo</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">L'excellence immobilière depuis 2025. Nous transformons vos rêves en réalité.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Liens rapides</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="#properties" class="text-gray-400 hover:text-white transition duration-300">Nos biens</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Nos services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Achat immobilier</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Vente accompagnée</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Gestion locative</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Évaluation gratuite</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Conseil en investissement</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <address class="not-italic text-gray-400 space-y-3">
+                        <p><i class="fas fa-map-marker-alt text-blue-400 mr-2"></i> Sacré Coeur 3<br>Dakar, Sénégal</p>
+                        <p><i class="fas fa-phone-alt text-blue-400 mr-2"></i>76 165 03 77</p>
+                        <p><i class="fas fa-envelope text-blue-400 mr-2"></i> a.diabate75@outlook.fr</p>
+                        <p><i class="fas fa-clock text-blue-400 mr-2"></i> Lun-Ven: 9h-19h</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Jamm Immo. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/221781921199" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition duration-300 animate-bounce-slow">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+     <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Property card interaction
+        document.querySelectorAll('.property-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const priceTag = card.querySelector('.absolute.bottom-4.left-4');
+                if (priceTag) {
+                    priceTag.classList.remove('bg-white', 'text-blue-600');
+                    priceTag.classList.add('bg-blue-600', 'text-white');
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const priceTag = card.querySelector('.absolute.bottom-4.left-4');
+                if (priceTag) {
+                    priceTag.classList.add('bg-white', 'text-blue-600');
+                    priceTag.classList.remove('bg-blue-600', 'text-white');
+                }
+            });
+        });
+
+        // Try to autoplay video (some browsers block autoplay without mute)
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                video.muted = true;
+                video.play().catch(e => console.log("Autoplay prevented:", e));
+            }
+        });
+   
+    </script>
+</body>
+</html>

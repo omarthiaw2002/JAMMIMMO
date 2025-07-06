@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du produit</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .product-images {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .thumbnail-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .thumbnail {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e63946;
+            margin: 15px 0;
+        }
+        
+        .description {
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            margin-bottom: 20px;
+        }
+        
+        .feature-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-item i {
+            margin-right: 10px;
+            color: #3110f0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #1c22d7;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+        
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+            }
+            
+            .thumbnail-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="btn">Accueil</a>
+        <h1>Nom du Produit</h1>
+    </div>
+    
+    <div class="product-container">
+        <div class="product-images">
+            <img id="mainImage" src="image/464850233.jpg" alt="Produit principal" class="main-image">
+            
+            <div class="thumbnail-container">
+                <img src="image/pexels-pixabay-271624.jpg" alt="Vue 1" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/464850258.jpg" alt="Vue 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/pexels-pixabay-276554.jpg" alt="Vue 3" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/pexels-quark-studio-1159039-2506990.jpg" alt="Vue 4" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+        
+        <div class="product-details">
+            <h2>Description</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+            
+            <div class="price">500,000cfa</div>
+            
+            <div class="features">
+                <h3>Caractéristiques</h3>
+                <div class="feature-item">
+                    <i>✓</i> <span>Matériau haute qualité</span>
+                </div>
+                <div class="feature-item">
+                    <i>✓</i> <span>Garantie 2 ans</span>
+                </div>
+                <div class="feature-item">
+                    <i>✓</i> <span>Dimensions: 30x40x15 cm</span>
+                </div>
+                <div class="feature-item">
+                    <i>✓</i> <span>Poids: 1.2 kg</span>
+                </div>
+                <div class="feature-item">
+                    <i>✓</i> <span>Couleurs disponibles: Noir, Blanc, Bleu</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function changeImage(element) {
+            document.getElementById('mainImage').src = element.src.replace('150x100', '600x400');
+        }
+    </script>
+</body>
+</html>
