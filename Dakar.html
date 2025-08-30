@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-      <link rel="icon" type="image/png" href="image/pexels-expect-best.jpg">
+    <link rel="icon" type="image/png" href="image/pexels-expect-best.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immobilier Premium - Trouvez votre maison de rêve</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,6 +31,12 @@
             transform: scale(1.05);
         }
         
+        .property-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
         @media (max-width: 768px) {
             .hero-image {
                 height: 50vh;
@@ -46,11 +52,10 @@
     <!-- Bouton Accueil en haut -->
     <div class="fixed top-4 left-4 z-50">
         <a href="index.html">
-                        </button>
-                        <button class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full font-medium transition duration-300">
-                            Accueil
-                        </button>
-                        </a>
+            <button class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full font-medium transition duration-300">
+                Accueil
+            </button>
+        </a>
     </div>
 
     <!-- Hero Section avec image de fond -->
@@ -64,7 +69,6 @@
     <!-- Boutons de navigation en bas de l'image -->
     <div class="flex justify-center -mt-8 mb-12 z-40 relative px-4">
         <div class="bg-white rounded-full shadow-xl flex flex-wrap justify-center">
-           
             <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full mx-2 my-2 flex items-center nav-button">
                 <i class="fas fa-home mr-2"></i> Maison
             </button>
@@ -84,9 +88,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Propriété 1 -->
             <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/1112703656?autoplay=1&loop=1#t=11s" allowfullscreen></iframe>
-                </div>
+                <img src="image/WhatsApp Image 2025-08-24 à 15.36.23_8d83f9e6.jpg" alt="Studio meublé à Ngor" class="property-image">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2 text-gray-800">Studio meublé à Ngor</h3>
                     <div class="flex flex-wrap gap-4 mb-4">
@@ -96,18 +98,12 @@
                         <div class="flex items-center text-gray-600">
                             <i class="fas fa-bath mr-2 text-blue-500"></i> 1 Salles de bain
                         </div>
-                       <!--  <div class="flex items-center text-gray-600">
-                            <i class="fas fa-layer-group mr-2 text-blue-500"></i> 2 Étages
-                        </div>
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-car mr-2 text-blue-500"></i> 2 Places parking
-                        </div> -->
                     </div>
                     <p class="text-gray-600 mb-4">Studio meublé</p>
                     <div class="flex justify-between items-center">
                         <span class="text-2xl font-bold text-blue-600">30.000 CFA la nuitée </span>
                         <a href="d1.html">
-                        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
                         </a>
                     </div>
                 </div>
@@ -115,12 +111,88 @@
             
             <!-- Propriété 2 -->
             <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/1099525337?autoplay=1&loop=1&muted=1" 
- allowfullscreen></iframe>
-                </div>
+                <img src="image/WhatsApp Image 2025-08-26 à 11.13.34_72d799ac.jpg" alt="F5 meublé à Fann" class="property-image">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Appartement Luxe à Colobane</h3>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">F5 meublé à Fann</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-bed mr-2 text-blue-500"></i> 1 Chambres
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-bath mr-2 text-blue-500"></i> 1 Salles de bain
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-bed mr-2 text-blue-500"></i> Salon spacieux et lumineux donnant sur petit jardin privé
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Découvrez ce magnifique duplex situé dans une résidence fermée et sécurisée</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-blue-600">2.250.000 FCFA</span>
+                        <a href="d2.html">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Propriété 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
+                <img src="image/WhatsApp Image 2025-08-26 à 11.18.28_88af8b25.jpg" alt="Appartement moderne" class="property-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">F3 meublé à Virage</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-bed mr-2 text-blue-500"></i> 2 Chambres
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-bath mr-2 text-blue-500"></i> 2 Salles de bain
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-layer-group mr-2 text-blue-500"></i> Salon spacieux & lumineux avec balcon
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Découvrez ce bel appartement situé au 3ème étage d'un immeuble moderne</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-blue-600">900.000 FCFA</span>
+                        <a href="d3.html">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Propriété 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
+                <img src="image/WhatsApp Image 2025-08-26 à 11.22.15_3c5ae704.jpg" alt="Villa de luxe" class="property-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">F2 meublé à Ouakam </h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas  mr-2 text-blue-500"></i>🛋 Grand salon lumineux
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas  mr-2 text-blue-500"></i> 🛏 Chambre avec salle de bain privative & dressing
+
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-swimming-pool mr-2 text-blue-500"></i> 🚻 Toilette visiteurs
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Découvrez ce F2 meublé situé à Ouakam, en face de Utile, idéal pour un séjour confortable et pratique ✨. </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-blue-600"> 40.000 FCFA / nuitée</span>
+                        <a href="d4.html">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=853&q=80" alt="Maison familiale" class="property-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">F2 meublé – Ouakam </h3>
                     <div class="flex flex-wrap gap-4 mb-4">
                         <div class="flex items-center text-gray-600">
                             <i class="fas fa-bed mr-2 text-blue-500"></i> 3 Chambres
@@ -129,56 +201,49 @@
                             <i class="fas fa-bath mr-2 text-blue-500"></i> 2 Salles de bain
                         </div>
                         <div class="flex items-center text-gray-600">
-                            <i class="fas fa-layer-group mr-2 text-blue-500"></i> 5ème étage
-                        </div>
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-car mr-2 text-blue-500"></i> 1 Place parking
+                            <i class="fas fa-car mr-2 text-blue-500"></i> Garage
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">Appartement haut de gamme, situé en plein cœur de Coloban. Cuisine équipée, climatisation et accès à la piscine de la résidence.</p>
+                    <p class="text-gray-600 mb-4">Parfaite pour une famille, cette maison spacieuse offre tout le confort nécessaire</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-600">28,500,000 FCFA</span>
-                        <a href="d2.html">
-                        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                        <span class="text-2xl font-bold text-blue-600">4.200.000 FCFA</span>
+                        <a href="d5.html">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- Propriété 3 -->
+           
             <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/1099525311?autoplay=1&loop=1&muted=1" 
-                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                <img src="https://images.unsplash.com/photo-1600566753052-d6f3c2dccd83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Appartement vue mer" class="property-image">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Maison Familiale à  médina</h3>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Appartement Vue Mer</h3>
                     <div class="flex flex-wrap gap-4 mb-4">
                         <div class="flex items-center text-gray-600">
-                            <i class="fas fa-bed mr-2 text-blue-500"></i> 4 Chambres
+                            <i class="fas fa-bed mr-2 text-blue-500"></i> 2 Chambres
                         </div>
                         <div class="flex items-center text-gray-600">
                             <i class="fas fa-bath mr-2 text-blue-500"></i> 2 Salles de bain
                         </div>
                         <div class="flex items-center text-gray-600">
-                            <i class="fas fa-layer-group mr-2 text-blue-500"></i> 1 Étage
-                        </div>
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-car mr-2 text-blue-500"></i> 3 Places parking
+                            <i class="fas fa-umbrella-beach mr-2 text-blue-500"></i> Vue sur mer
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">Spacieuse maison familiale avec grand jardin arboré. Salon de 50m², cuisine indépendante et dépendances. Quartier résidentiel sécurisé.</p>
+                    <p class="text-gray-600 mb-4">Appartement avec une vue imprenable sur l'océan, proche des plages et commodités</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-600">35,750,000 FCFA</span>
-                        <a href="d3.html">
-                        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                        <span class="text-2xl font-bold text-blue-600">3.800.000 FCFA</span>
+                        <a href="d6.html">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
                         </a>
                     </div>
                 </div>
             </div>
+            Propriété 5 -->
         </div>
     </div>
-      <!-- Floating WhatsApp Button -->
+
+    <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
         <a href="https://wa.me/221781921199" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition duration-300 animate-bounce-slow">
             <i class="fab fa-whatsapp text-2xl"></i>
@@ -189,6 +254,7 @@
     <button id="back-to-top" class="fixed bottom-6 left-6 bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition duration-300 opacity-0 invisible">
         <i class="fas fa-arrow-up"></i>
     </button>
+    
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
@@ -220,7 +286,8 @@
                 this.style.transform = 'scale(1)';
             });
         });
-         // Back to Top Button
+        
+        // Back to Top Button
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', () => {
@@ -236,12 +303,12 @@
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        
         // Filtrage des propriétés (fonctionnalité de base)
         document.querySelectorAll('.nav-button').forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 const type = this.textContent.trim();
-               
                 // Ici, vous pourriez ajouter une logique pour filtrer les propriétés affichées
             });
         });

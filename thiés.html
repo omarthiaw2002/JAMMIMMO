@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8"> 
-      <link rel="icon" type="image/png" href="image/pexels-expect-best.jpg">
+    <link rel="icon" type="image/png" href="image/pexels-expect-best.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immobilier Premium - Trouvez votre maison de rêve</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,6 +31,12 @@
             transform: scale(1.05);
         }
         
+        .property-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
         @media (max-width: 768px) {
             .hero-image {
                 height: 50vh;
@@ -46,17 +52,16 @@
     <!-- Bouton Accueil en haut -->
     <div class="fixed top-4 left-4 z-50">
         <a href="index.html">
-                        </button>
-                        <button class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full font-medium transition duration-300">
-                            Accueil
-                        </button>
-                        </a>
+            <button class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full font-medium transition duration-300">
+                Accueil
+            </button>
+        </a>
     </div>
 
     <!-- Hero Section avec image de fond -->
     <div class="hero-image w-full flex items-center justify-center">
         <div class="text-center px-4">
-            <h1 class="text-white text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Thiès </h1>
+            <h1 class="text-white text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Thiès</h1>
             <p class="text-white text-xl md:text-2xl mb-8">Découvrez notre sélection exclusive de biens immobiliers</p>
         </div>
     </div>
@@ -64,7 +69,6 @@
     <!-- Boutons de navigation en bas de l'image -->
     <div class="flex justify-center -mt-8 mb-12 z-40 relative px-4">
         <div class="bg-white rounded-full shadow-xl flex flex-wrap justify-center">
-           
             <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full mx-2 my-2 flex items-center nav-button">
                 <i class="fas fa-home mr-2"></i> Maison
             </button>
@@ -84,25 +88,19 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Propriété 1 -->
             <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/1111370562?autoplay=1&loop=1&muted=1" 
-                       allowfullscreen></iframe>
-                </div>
+                <img src="image/WhatsApp Image 2025-08-15 à 22.13.31_517454c4.jpg" alt="Exploitation agricole de 2 hectares" class="property-image">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800"> Exploitation agricole de 2 hectares</h3>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Exploitation agricole de 2 hectares</h3>
                     <div class="flex flex-wrap gap-4 mb-4">
                         <div class="flex items-center text-gray-600">
-                             <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> Ndiar                        
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> Ndiar                        
                         </div>
-                       
-                       
-                       
                     </div>
-                    <p class="text-gray-600 mb-4">Offrez-vous une opportunité unique d’investissement en pleine nature</p>
+                    <p class="text-gray-600 mb-4">Offrez-vous une opportunité unique d'investissement en pleine nature</p>
                     <div class="flex justify-between items-center">
                         <span class="text-2xl font-bold text-blue-600">150,000,000 FCFA</span>
                         <a href="thiés1.html">
-                        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
                         </a>
                     </div>
                 </div>
@@ -110,26 +108,19 @@
             
             <!-- Propriété 2 -->
             <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                   <iframe class="absolute top-0 left-0 w-full h-full" 
-                        src="https://player.vimeo.com/video/1112693611?autoplay=1&loop=1&muted=1" 
-                        allowfullscreen></iframe>
-
-                </div>
+                <img src="image/9130dea642b3b21c8b285fa57753f0cb13c11712.jpg" alt="3 Hectares Agricoles à Thiès" class="property-image">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800"> 3 Hectares Agricoles à Thiès </h3>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">3 Hectares Agricoles à Thiès</h3>
                     <div class="flex flex-wrap gap-4 mb-4">
                         <div class="flex items-center text-gray-600">
-                             <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> Ndiar       
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> Ndiar       
                         </div>
-                        
                     </div>
-                    <p class="text-gray-600 mb-4">Imaginez votre projet agricole prendre vie sur 3 hectares prêts à exploiter, avec eau et électricité déjà sur place.
-</p>
+                    <p class="text-gray-600 mb-4">Imaginez votre projet agricole prendre vie sur 3 hectares prêts à exploiter, avec eau et électricité déjà sur place.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-600">💰 Prix : 105 000 000 CFA</span>
+                        <span class="text-2xl font-bold text-blue-600">105 000 000 CFA</span>
                         <a href="thiés2.html">
-                        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
                         </a>
                     </div>
                 </div>
@@ -137,10 +128,7 @@
             
             <!-- Propriété 3 -->
             <div class="bg-white rounded-xl overflow-hidden shadow-lg property-card transition duration-300">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/1099524908?autoplay=1&loop=1&muted=1" 
-                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Maison Familiale à Madina FALL" class="property-image">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2 text-gray-800">Maison Familiale à Madina FALL</h3>
                     <div class="flex flex-wrap gap-4 mb-4">
@@ -159,17 +147,17 @@
                     </div>
                     <p class="text-gray-600 mb-4">Spacieuse maison familiale avec grand jardin arboré. Salon de 50m², cuisine indépendante et dépendances. Quartier résidentiel sécurisé.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-blue-600">💰 Prix : 105 000 000 CFA
-</span>
+                        <span class="text-2xl font-bold text-blue-600">105 000 000 CFA</span>
                         <a href="thiés3.html">
-                        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Voir plus</button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-      <!-- Floating WhatsApp Button -->
+    
+    <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
         <a href="https://wa.me/221781921199" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition duration-300 animate-bounce-slow">
             <i class="fab fa-whatsapp text-2xl"></i>
@@ -180,6 +168,7 @@
     <button id="back-to-top" class="fixed bottom-6 left-6 bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition duration-300 opacity-0 invisible">
         <i class="fas fa-arrow-up"></i>
     </button>
+    
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
@@ -211,7 +200,8 @@
                 this.style.transform = 'scale(1)';
             });
         });
-         // Back to Top Button
+        
+        // Back to Top Button
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', () => {
@@ -227,12 +217,12 @@
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        
         // Filtrage des propriétés (fonctionnalité de base)
         document.querySelectorAll('.nav-button').forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 const type = this.textContent.trim();
-               
                 // Ici, vous pourriez ajouter une logique pour filtrer les propriétés affichées
             });
         });
